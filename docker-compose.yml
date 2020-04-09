@@ -1,12 +1,13 @@
 squid:
     build: squid/.
     environment:
+        # in MB
         - "DISK_CACHE_SIZE=5000"
-        - "MAX_CACHE_OBJECT=1000"
+        - "MAX_CACHE_OBJECT=4096"
         # - "SQUID_DIRECTIVES_ONLY=true"
         # - "SQUID_DIRECTIVES='refresh_pattern . 0 0 1 refresh-ims'"
     net: "host"
-    ## Uncomment and update /path/to/cache
+    ## Uncomment and update /path/to/cache - folder should be owned by proxy:proxy
     volumes:
        - /var/cache/squid:/var/cache/squid
 
