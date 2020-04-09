@@ -41,8 +41,8 @@ def main():
     if os.path.exists("/run/squid.pid"):
         os.remove("/run/squid.pid")
 
-    max_object_size = os.getenv("MAXIMUM_CACHE_OBJECT", '1024')
-    disk_cache_size = os.getenv("DISK_CACHE_SIZE", '5000')
+    max_object_size = os.getenv("MAXIMUM_CACHE_OBJECT", '4096')
+    disk_cache_size = os.getenv("DISK_CACHE_SIZE", '10000')
     squid_directives_only = os.getenv("SQUID_DIRECTIVES_ONLY", False)
     arbitrary_squid_directives = os.getenv("SQUID_DIRECTIVES", None)
 

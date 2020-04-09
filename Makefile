@@ -1,3 +1,7 @@
+compose:
+	docker-compose up
+rebuild:
+	docker-compose up -d --build
 run-squid:
 	docker run --net host -d squid-in-a-can
 add-redirect:
